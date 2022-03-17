@@ -217,3 +217,7 @@ UpgradeLog*.htm
 FakesAssemblies/
 _unittestdefinition.cpp
 /Source/install_manifest.txt
+
+# GCBM
+
+gcbm/

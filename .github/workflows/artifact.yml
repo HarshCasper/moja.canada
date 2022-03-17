@@ -1,0 +1,17 @@
+name: Test & publish FLINT Cloud images 
+
+on:
+  push:
+    branches: [ gha-ci ]
+
+jobs:
+  generate_gcbm_binary:
+    runs-on: ubuntu-latest
+    container: 
+      image: ghcr.io/harshcasper/moja.canada:gha-ci
+
+    steps:
+      - uses: actions/upload-artifact@v3
+        with:
+          name: GCBM
+          path: /opt/gcbm
