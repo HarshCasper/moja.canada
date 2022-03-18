@@ -1,0 +1,15 @@
+name: Script Runner
+
+on:
+  push:
+    branches: [ script-runner ]
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run script
+        run: |
+          curl https://raw.githubusercontent.com/HarshCasper/moja.canada/script-runner/gcbm.sh > gcbm.sh
+          bash gcbm.sh
